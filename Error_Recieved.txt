@@ -1,0 +1,7 @@
+https://stackoverflow.com/questions/53888878/cv2-warn0-terminating-async-callback-when-attempting-to-take-a-picture/56839757#56839757
+
+
+15 Up votes
+
+I had the same warning. Just modify the line camera = cv2.VideoCapture(camera_port) to camera = cv2.VideoCapture(camera_port, cv2.CAP_DSHOW) and add cv2.destroyAllWindows() as the last line of your code
+
